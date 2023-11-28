@@ -1,49 +1,34 @@
-# ERC20 Token Project
+# Project Title
 
-This project demonstrates the deployment and usage of an ERC20 token using Hardhat and Alchemy. It includes functionality for pre-minting tokens, as well as the ability to burn and mint tokens.
+Simple overview of use/purpose.
 
-## Prerequisites
+## Description
 
-Before getting started, make sure you have the following installed on your machine:
-
-- Node.js
-- npm (Node Package Manager)
+This Solidity smart contract deploys an ERC20 token named "latin" with the symbol "LTN". Leveraging OpenZeppelin's `ERC20` and `Ownable` contracts, it establishes ownership control and standard token functionalities. Upon deployment, 10,000 tokens are minted to the deployer's address. The contract owner can mint additional tokens for any address, while all holders possess the ability to burn their tokens. 
 
 ## Getting Started
+Requirements like ERC20 token, VSCode , NodeJS Should be staisfied
 
-Follow these steps to clone the repository, install dependencies, and deploy the ERC20 token:
+### Installing
 
-Clone the repository:
+* Clone the github repository and open it with Github
+* Paste the contract code in the Remix IDE
+* Compile the code
+* Deploy the code
 
-   git clone ...
-   cd ...
+### Executing program
 
-   Install dependencies:
-npm install
+* Type npm install  in the terminal
+* Then type npm install hardhat
+* type npx hardhat compile
+* type  npx hardhat run scripts/deploy.js --network goerli
+* copy the deployed address
+* open remix ide and paste the address at "At address"
 
-Configure Alchemy RPC Endpoint:
+## Authors
 
-Create a .env file in the root directory of the project.
-Set ALCHEMY_RPC_ENDPOINT to your Alchemy RPC endpoint.
+Ashish 
 
-Deploy the ERC20 token:
-npx hardhat run scripts/deploy.js --network alchemy
-this will deploy the ERC20 token contract to the specified Alchemy network.
+## License
 
-# Interacting with the Contract
-You can interact with the deployed ERC20 token contract using Remix. Follow these steps:
-
-Open the Remix IDE in your browser: https://remix.ethereum.org/
-
-Connect Remix to your desired Ethereum network:
-
-Remix will load the contract's functions and events.
-You can interact with the contract by calling its functions and providing the required parameters.
-ERC20 Token Functions
-The deployed ERC20 token contract includes the following functions:
-
-burn(address from, uint256 amount): Burn a specified amount of tokens from your own address.
-mint(address to, uint256 amount): Mint a specified amount of tokens to any address.
-
-Feel free to explore and test the functionalities of the ERC20 token contract using Remix!
-```
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
